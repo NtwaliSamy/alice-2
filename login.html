@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <script>
+        function validateLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username == "") {
+                alert("Username cannot be empty");
+                return false;
+            }
+            if (password == "") {
+                alert("Password cannot be empty");
+                return false;
+            }
+            // You can add further validations here, such as checking password length or format
+            alert("Login successful!");
+            return true; // Continue to submit the form if everything is valid
+        }
+    </script>
+</head>
+<body>
+    <div style="width: 300px; margin: 50px auto; padding: 20px; border: 1px solid #ccc;">
+        <h2>Login</h2>
+        <form onsubmit="return validateLogin()">
+            <div style="margin-bottom: 10px;">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" style="width: 100%; padding: 8px;">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" style="width: 100%; padding: 8px;">
+            </div>
+            <div>
+                <button type="submit" style="width: 100%; padding: 10px; background-color: #4CAF50; color: white;">Login</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
